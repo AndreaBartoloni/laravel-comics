@@ -26,51 +26,16 @@
         <button class="button">Load More</button>
         <div class="sfondo-blu-iconbar">
             <div class="container-iconbar container-bg">
-                <div class="card-icon">
-                    <div class="container-image">
-                        <img src="{{ asset('img/buy-comics-digital-comics.png')}}">
+                @foreach($iconsBar as $iconBar)
+                    <div class="card-icon">
+                        <div class="container-image">
+                            <img src="{{$iconBar['image']}}">
+                        </div>
+                        <div class="container-title">
+                            <p>{{$iconBar['title']}}</p>
+                        </div>                    
                     </div>
-                    <div class="container-title">
-                        <p></p>
-                    </div>
-                    
-                </div>
-                <div class="card-icon">
-                    <div class="container-image">
-                        <img src="{{ asset('img/buy-comics-digital-comics.png')}}">
-                    </div>
-                    <div class="container-title">
-                        <p></p>
-                    </div>
-                    
-                </div>
-                <div class="card-icon">
-                    <div class="container-image">
-                        <img src="{{ asset('img/buy-comics-digital-comics.png')}}">
-                    </div>
-                    <div class="container-title">
-                        <p></p>
-                    </div>
-                    
-                </div>
-                <div class="card-icon">
-                    <div class="container-image">
-                        <img src="{{ asset('img/buy-comics-digital-comics.png')}}">
-                    </div>
-                    <div class="container-title">
-                        <p></p>
-                    </div>
-                    
-                </div>
-                <div class="card-icon">
-                    <div class="container-image">
-                        <img src="{{ asset('img/buy-comics-digital-comics.png')}}">
-                    </div>
-                    <div class="container-title">
-                        <p></p>
-                    </div>
-                    
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
